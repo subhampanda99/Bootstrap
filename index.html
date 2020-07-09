@@ -42,11 +42,50 @@
       </div>
     </div>
   </nav>
-  <!-- Button trigger Modal -->
+
+  <!-- Modal without data tag -->
   <div id="loginModal" class="modal fade" role="dialog">
     <div class="modal-dialog modal-lg" role="content">
-      <!-- Modal Content -->
       <div class="modal-content">
+        <div class="modal-header">
+          <h4 class="modal-title">Login</h4>
+          <button type="button" class="close dismissLogin">×</button>
+        </div>
+        <div class="modal-body">
+          <form>
+            <div class="form-row">
+              <div class="form-group col-sm-4">
+                <label class="sr-only" for="exampleInputEmail3">Email address</label>
+                <input type="email" class="form-control form-control-sm mr-1" id="exampleInputEmail3"
+                  placeholder="Enter email">
+              </div>
+              <div class="form-group col-sm-4">
+                <label class="sr-only" for="exampleInputPassword3">Password</label>
+                <input type="password" class="form-control form-control-sm mr-1" id="exampleInputPassword3"
+                  placeholder="Password">
+              </div>
+              <div class="col-sm-auto">
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox">
+                  <label class="form-check-label"> Remember me
+                  </label>
+                </div>
+              </div>
+            </div>
+            <div class="form-row">
+              <button type="button" class="btn btn-secondary btn-sm ml-auto dismissLogin">Cancel</button>
+              <button type="submit" class="btn btn-primary btn-sm ml-1">Sign in</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Button trigger Modal -->
+  <!-- <div id="loginModal" class="modal fade" role="dialog">
+    <div class="modal-dialog modal-lg" role="content"> -->
+  <!-- Modal Content -->
+  <!-- <div class="modal-content">
         <div class="modal-header">
           <h4 class="modal-title">Login</h4>
           <button type="button" class="close" data-dismiss="modal">&times;</button>
@@ -70,12 +109,12 @@
                   <label class="form-check-label">Remember me</label>
                 </div>
               </div>
-            </div>
-            <!-- <div class="form-row">
+            </div> -->
+  <!-- <div class="form-row">
                 <button type="button" class="btn btn-secondary btn-sm ml-auto" data-dismiss="modal">Cancel</button>
                 <button type="submit" class="btn btn-primary btn-sm ml-1">Sign in</button>
               </div> -->
-          </form>
+  <!-- </form>
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-secondary btn-sm ml-auto" data-dismiss="modal">Cancel</button>
@@ -83,13 +122,82 @@
         </div>
       </div>
     </div>
+  </div> -->
+
+  <!-- Reserve table without data tag -->
+  <div class="modal fade" id="reservation" role="dialog">
+    <div class="modal-dialog modal-lg" role="content">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h4 class="modal-title">Reserve a Table</h4>
+          <button type="button" class="close dismissReserve">×</button>
+        </div>
+        <div class="modal-body">
+          <dl class="row">
+            <dt class="col-12 col-sm-3 col-lg-2 mb-3">Number Of Guests</dt>
+            <dd class="col-auto">
+              <div class="custom-control custom-radio custom-control-inline">
+                <input type="radio" id="1" name="noOfGuests" class="custom-control-input">
+                <label class="custom-control-label" for="1">1</label>
+              </div>
+              <div class="custom-control custom-radio custom-control-inline">
+                <input type="radio" id="2" name="noOfGuests" class="custom-control-input">
+                <label class="custom-control-label" for="2">2</label>
+              </div>
+              <div class="custom-control custom-radio custom-control-inline">
+                <input type="radio" id="3" name="noOfGuests" class="custom-control-input">
+                <label class="custom-control-label" for="3">3</label>
+              </div>
+              <div class="custom-control custom-radio custom-control-inline">
+                <input type="radio" id="4" name="noOfGuests" class="custom-control-input">
+                <label class="custom-control-label" for="4">4</label>
+              </div>
+              <div class="custom-control custom-radio custom-control-inline">
+                <input type="radio" id="5" name="noOfGuests" class="custom-control-input">
+                <label class="custom-control-label" for="5">5</label>
+              </div>
+              <div class="custom-control custom-radio custom-control-inline">
+                <input type="radio" id="6" name="noOfGuests" class="custom-control-input">
+                <label class="custom-control-label" for="6">6</label>
+              </div>
+            </dd>
+          </dl>
+          <dl class="row">
+            <dt class="col-12 col-sm-2 mb-3">Section</dt>
+            <dd class="col-auto">
+              <div class="btn-group btn-group-toggle" data-toggle="buttons">
+                <label class="btn btn-success active">
+                  <input type="radio" name="options" id="option1" autocomplete="off" checked="">
+                  Non-Smoking
+                </label>
+                <label class="btn btn-danger">
+                  <input type="radio" name="options" id="option2" autocomplete="off"> Smoking
+                </label>
+              </div>
+            </dd>
+          </dl>
+          <dl class="row">
+            <dt class="col-12 col-sm-2 mb-3">Date And Time</dt>
+            <dd class="col-auto d-sm-flex d-block">
+              <input type="text" name="" id="" class="form-control" placeholder="Date">
+              <input type="text" name="" id="" class="form-control ml-sm-3" placeholder="Time">
+            </dd>
+          </dl>
+          <dl class="row">
+            <dt class="offset-sm-2 mr-3"><button type="button"
+                class="btn btn-secondary offset-2 dismissReserve">Cancel</button></dt>
+            <dt><button class="btn btn-primary">Reserve</button></dt>
+          </dl>
+        </div>
+      </div>
+    </div>
   </div>
 
   <!-- Reserve table Modal -->
-  <div id="reservetableModal" class="modal fade" role="dialog">
-    <div class="modal-dialog modal-lg" role="content">
-      <!-- Modal Content -->
-      <div class="modal-content">
+  <!-- <div id="reservetableModal" class="modal fade" role="dialog">
+    <div class="modal-dialog modal-lg" role="content"> -->
+  <!-- Modal Content -->
+  <!-- <div class="modal-content">
         <div class="modal-header">
           <h4 class="modal-title">Reserve Table</h4>
           <button type="button" class="close" data-dismiss="modal">&times;</button>
@@ -160,14 +268,14 @@
           </form>
 
 
-        </div>
-        <!-- <div class="modal-footer">
+        </div> -->
+  <!-- <div class="modal-footer">
             <button type="button" class="btn btn-secondary btn-sm ml-auto" data-dismiss="modal">Cancel</button>
             <button type="submit" class="btn btn-primary btn-sm ml-1">Sign in</button>
           </div> -->
-      </div>
+  <!-- </div>
     </div>
-  </div>
+  </div> -->
 
   <header class="jumbotron">
     <div class="container">
@@ -183,16 +291,22 @@
         <div class="col-12 col-sm align-self-center" style="text-align: center;">
           <img src="img/logo.png" class="img-fluid">
 
-          <a role="button" class="btn nab-link btn-warning" data-toggle="modal" data-target="#reservetableModal"
-            href="#">Reserve Table
-          </a>
+        </div>
+        <div class="col-12 col-sm-3 align-self-center">
+          <a role="button" class="btn btn-warning btn-sm text-dark btn-block" data-toggle="modal"
+            data-target="#reservation">Reserve Table</a>
+        </div>
 
-          <!-- Tooltip
+        <!-- <a role="button" class="btn nab-link btn-warning" data-toggle="modal" data-target="#reservetableModal"
+            href="#">Reserve Table
+          </a> -->
+
+        <!-- Tooltip
           <a role="button" class="btn nab-link btn-warning" data-toggle="tooltip" data-html="true"
             title="Or Call us at +852 12345678" data-placement="bottom" href="#reservationform">Reserve Table
           </a> -->
-        </div>
       </div>
+    </div>
     </div>
   </header>
 
@@ -249,10 +363,11 @@
           <a class="carousel-control-next" href="#mycarousel" role="button" data-slide="next">
             <span class="carousel-control-next-icon"></span>
           </a>
-
+          <!-- single button for play and pause -->
           <button class="btn btn-danger btn-sm" id="carouselButton">
             <span class="fa fa-pause"></span>
           </button>
+          <!-- 2 buttons for play and pause -->
           <!-- <div class="btn-group" id="carouselButton">
             <button class="btn btn-danger btn-sm" id="btn-pause">
               <span class="fa fa-pause"></span>
@@ -426,6 +541,8 @@
       </div>
     </div>
   </footer>
+
+  <!-- jQuery first, then Popper.js, then Bootstrap JS. -->
   <script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
   <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
   <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
@@ -469,6 +586,28 @@
     });
 
 
+  </script>
+
+  <script>
+    $('#loginModel').on('shown.bs.modal', function () {
+      $('#myInput').trigger('focus')
+    });
+  </script>
+
+  <script>
+
+    $('#login').click(function () {
+      $('#loginModal').modal();
+    });
+    $('.dismissLogin').click(function () {
+      $('#loginModal').modal('hide');
+    });
+    $('.dismissReserve').click(function () {
+      $('#reserve').modal('hide');
+    });
+    $('#reservation').click(function () {
+      $('#reserve').modal('show');
+    });
   </script>
 
 </body>
