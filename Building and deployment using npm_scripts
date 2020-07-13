@@ -37,4 +37,4 @@ Open index.html and surround the css links inclusion code as follows and Do the 
     <script src="js/scripts.js"></script>
     <!-- endbuild -->
 
-o build the distribution folder, you can type the following at the prompt: npm run build
+To build the distribution folder, you can type the following at the prompt: npm run build

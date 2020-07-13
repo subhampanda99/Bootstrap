@@ -1,0 +1,63 @@
+#Gulp Syntax:
+
+Installing Gulp
+    At the command prompt, type the following to install Gulp command-line interface (CLI) globally:  npm install -g gulp-cli@2.0.1
+    Next install Gulp to use within your project. To do this, go to the conFusion folder and type the following at the prompt: npm install gulp@3.9.1 --save-dev
+
+Install Gulp Plugins for SASS and Browser-Sync
+    Install all the Gulp plugins that you will need for this exercise. To do this, type the following at the command prompt: npm install gulp-sass@3.1.0  browser-sync@2.23.6 --save-dev
+
+Copying the Files and Cleaning up the Dist Folder
+    We will now create the tasks for copying the font files and cleaning up the distribution folder. 
+    To do this we will first install the del Node module and require it in the Gulp file as follows: npm install del@3.0.0 --save-dev
+
+Compressing and Minifying Images
+    We will now install the gulp-imagemin plugin and configure the imagemin task. To do this we install the plugin and require it as follows: npm install gulp-imagemin@4.1.0 --save-dev
+
+Preparing the Distribution Folder and Files
+    We now install the gulp-usemin and other related Gulp plugins and require them as follows: npm install gulp-uglify@3.0.0 gulp-usemin@0.3.29 gulp-rev@8.1.1 gulp-clean-css@3.9.3 gulp-flatmap@1.0.2 gulp-htmlmin@4.0.0 --save-dev
+
+Creating a Gulp File
+Next you need to create a Gulp file containing the tasks to be run when you use Gulp. To do this, create a file named gulpfile.js in the  folder
+
+Running the Gulp Tasks
+At the command prompt, if you type gulp build it will run the build task: gulp build
+
+
+#Grunt Syntax:
+
+Installing Grunt
+    At the command prompt, type the following to install Grunt command-line interface (CLI):npm install -g grunt-cli@1.2.0
+    Next install Grunt to use within your project. To do this, go to the conFusion folder and type the following at the prompt: npm install grunt@1.0.2 --save-dev
+
+Compiling SCSS to CSS
+    Next, we are going to set up our first Grunt task. The SASS task converts the SCSS code to CSS. To do this, you need to include some Grunt modules that help us with the tasks. 
+    Install the following modules by typing the following at the prompt: npm install grunt-sass@2.1.0 --save-dev
+                                                                         npm install time-grunt@1.4.0 --save-dev
+                                                                         npm install jit-grunt@0.10.0 --save-dev
+
+Watch and Serve Tasks
+    The final step is to use the Grunt modules watch and browser-sync to spin up a web server and keep a watch on the files and automatically reload the browser when any of the watched files are updated. 
+    To do this, install the following grunt modules: npm install grunt-contrib-watch@1.0.0 --save-dev
+                                                     npm install grunt-browser-sync@2.2.0 --save-dev
+
+Copying the Files and Cleaning Up the Dist Folder
+    Next you will install the Grunt modules to copy over files to a distribution folder named dist, and clean up the dist folder when needed. 
+    To do this, install the following Grunt modules: npm install grunt-contrib-copy@1.0.0 --save-dev
+                                                     npm install grunt-contrib-clean@1.1.0 --save-dev
+
+Compressing and Minifying Images
+    Next we install the grunt-contrib-imagemin module and use it to process the images. To install this module type at the prompt:npm install grunt-contrib-imagemin@2.0.1 --save-dev
+
+Preparing the Distribution Folder and Files
+    We are now going to use the Grunt usemin module together with concat, cssmin, uglify and filerev to prepare the distribution folder. 
+    To do this, install the following Grunt modules:
+                                                        npm install grunt-contrib-concat@1.0.1 --save-dev
+                                                        npm install grunt-contrib-cssmin@2.2.1 --save-dev
+                                                        npm install grunt-contrib-htmlmin@2.4.0 --save-dev
+                                                        npm install grunt-contrib-uglify@3.3.0 --save-dev
+                                                        npm install grunt-filerev@2.3.1 --save-dev
+                                                        npm install grunt-usemin@3.1.1 --save-dev
+
+Now if you run Grunt, it will create a dist folder with the files structured correctly to be distributed to a server to host your website. To do this, type the following at the prompt: grunt build
+
