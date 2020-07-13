@@ -1,0 +1,40 @@
+NPM SCRIPTS
+Cleaning up a Distribution Folder
+	Install the rimraf npm module by typing the following at the prompt: npm install --save-dev rimraf
+    Then, set up the following script: "clean": "rimraf dist",
+
+Copying Fonts 
+    Your project uses font-awesome fonts. These need to be copied to the distribution folder. 
+    To help us do this, install the copyfiles NPM module globally as follows: npm -g install copyfiles@2.0.0
+    Then set up the following script: "copyfonts": "copyfiles -f node_modules/font-awesome/fonts/* dist/fonts",
+
+Compressing and Minifying Images
+    We use the imagemin-cli NPM module to help us to compress our images to reduce the size of the images being used in our project. 
+    Install the imagemin-cli module as follows: npm -g install imagemin-cli@3.0.0
+    (Remember to use sudo on mac and Linux. NOTE: Some students have encountered issues with imagemin-cli not installing its 
+    plugins due to issues with global permissions on Mac. In that case try: sudo npm install -g imagemin-cli@3.0.0 --unsafe-perm=true --allow-root )
+    Then set up the following script: "imagemin": "imagemin img/* -o dist/img ",
+
+Preparing the Distribution Folder
+    Open .gitignore and update it as follows. We do not want the dist folder to be checked into the git repository - node_modules,dist
+    Then, install the usemin-cli, cssmin, uglifyjs and htmlmin NPM packages as follows: npm install --save-dev usemin-cli@0.5.1 cssmin@0.4.3 uglifyjs@2.4.11 htmlmin@0.0.7
+    Add the following two scripts to the package.json file: "usemin": "usemin contactus.html -d dist --htmlmin -o dist/contactus.html && usemin aboutus.html -d dist --htmlmin -o dist/aboutus.html && usemin index.html -d dist --htmlmin -o dist/index.html",
+                                                            "build": "npm run clean && npm run imagemin && npm run copyfonts && npm run usemin"
+
+Open index.html and surround the css links inclusion code as follows and Do the same change in aboutus.html and contactus.html:
+    <!-- build:css css/main.css --> //these top and bottom tags are important to write for creating a distribution folder
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="node_modules/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="node_modules/bootstrap-social/bootstrap-social.css">
+    <link href="css/styles.css" rel="stylesheet">
+    <!-- endbuild -->
+
+Open index.html and surround the css links inclusion code as follows and Do the same change in aboutus.html and contactus.html:
+    <!-- build:js js/main.js --> //these top and bottom tags are important to write for creating a distribution folder
+    <script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
+    <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
+    <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="js/scripts.js"></script>
+    <!-- endbuild -->
+
+o build the distribution folder, you can type the following at the prompt: npm run build
